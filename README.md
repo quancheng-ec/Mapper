@@ -6,13 +6,15 @@
   2. 自动加入基本的CRUD方法，并且支持conditioned query
   3. 去掉了原来对Mapper项目的依赖，生成后的代码增加依赖: javax.persistence:persistenct-api
 3. 使用方法：
+  0. 项目使用
+  当前项目还没有推到中央库，要自己先pull下来，mvn install一下发布到本地，就可以用使用了
   1. gradle加入依赖，及相关task：
   
 ```
 dependencies {
     genDAO 'org.mybatis.generator:mybatis-generator-core:1.3.4'
     genDAO 'mysql:mysql-connector-java:5.1.36'
-    genDAO group: "com.quancheng.shared", name: "mapper", version: "1.0.0-SNAPSHOT", changing: true
+    genDAO group: "com.quancheng.poodle-mapper", name: "mapper", version: "1.0.0-SNAPSHOT", changing: true
 }
 
 task genDAO << {
